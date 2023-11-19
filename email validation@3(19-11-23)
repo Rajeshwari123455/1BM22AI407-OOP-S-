@@ -1,0 +1,17 @@
+ef is_valid_email(email_address):
+    if '@' in email_address and email_address.count('@')==1:
+      username, domain = email_address.split('@')
+      if username and domain:
+
+         if username[0].isalnum():
+
+             if len(email_address)<= 256:
+
+                 return True
+
+      return false
+email = input("enter an email address:")
+if is_valid_email(email):
+   print("valid email address.")
+else:
+   print("it is not a valid email address.")
