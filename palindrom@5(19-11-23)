@@ -1,0 +1,22 @@
+def is_palindrome(s):
+
+    return s == s[::-1]
+
+def get_palindromes(input_str):
+
+    palindromes = []
+
+
+    words = input_str.split()
+
+
+    for word in words:
+        if is_palindrome(word):
+            palindromes.append(word)
+
+    return palindromes
+
+
+input_string = "level radar python deed kayak"
+result = get_palindromes(input_string)
+print("Palindromes:", result)
