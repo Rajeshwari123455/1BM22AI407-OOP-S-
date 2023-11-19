@@ -1,0 +1,14 @@
+def encrypt(text, shift):
+    encrypted_text = ''.join([shift_char(char, shift) for char in text])
+    return encrypted_text
+
+def shift_char(char, shift):
+    if char.isalpha():
+        start = ord('A') if char.isupper() else ord('a')
+        return chr((ord(char) - start + shift) % 26 + start)
+    else:
+        return char
+
+# Example usage:
+result = encrypt("Hello, World!", 3)
+print("Encrypted Text:", result)
