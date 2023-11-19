@@ -1,0 +1,12 @@
+def hexagonArea(s):
+
+    return ((3 * math.sqrt(3) *
+            (s * s)) / 2);
+
+
+if __name__ == "__main__" :
+
+    s = 4
+
+    print("Area:","{0:.4f}" .
+           format(hexagonArea(s)))
