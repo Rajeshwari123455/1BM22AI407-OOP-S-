@@ -1,0 +1,32 @@
+class dog:
+  def __init__(self, name , size , breed = "unknown" , dob = "unknown" ):
+    self.name=name
+    self.size=size
+    self.breed=breed
+    self.dob=dob
+
+  def bark(self):
+
+    print("wolf")
+
+  def get_name(self):
+    print(self.name)
+
+  def set_name(self,Name):
+
+    self.name=Name
+    print(self.name)
+
+  def dog_years(self,cur_year):
+    YOB = self.dob[6:]
+    year = int(YOB)
+    age=(cur_year - year)*7
+    print(age)
+
+D=dog('chinni',22,'pug',"10/05/2022")
+print(D.bark())
+print(D.get_name())
+print(D.set_name("dolly"))
+print(D.dog_years(2023))
+
+
