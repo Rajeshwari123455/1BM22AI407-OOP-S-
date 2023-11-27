@@ -1,0 +1,22 @@
+class calculator:
+  def __init__(self,version):
+    self.version = version
+
+  def display(self):
+     print("version")
+  def add(n1,n2):
+     print(n1+n2)
+     return n1+n2
+def main():
+  c1=calculator("vert5r")
+  c1.display()
+  calculator.add(30,10)
+
+  c2=calculator("yuujtu")
+  c2.display()
+  calculator.add(10,20) 
+
+  
+if __name__ == "__main__":
+  main() 
+
