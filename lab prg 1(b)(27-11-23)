@@ -1,0 +1,39 @@
+#Perform addition of two complex numbers using class COMPLEX.
+#COMPLEX has two class variables real part and img part.
+#constructors assigns values for the respective variables.create three objects c1,c2 and c3.
+#where is the result of adding c1 and c2
+
+class COMPLEX:
+    real_part = 0
+    img_part = 0
+
+    def __init__(self, real, img):
+        self.real_part = real
+        self.img_part = img
+
+    def display(self):
+        print(f"{self.real_part} + {self.img_part}i")
+
+    @classmethod
+    def add_complex(cls, c1, c2):
+        result_real = c1.real_part + c2.real_part
+        result_img = c1.img_part + c2.img_part
+        return COMPLEX(result_real, result_img)
+
+
+c1 = COMPLEX(2, 3)
+c2 = COMPLEX(1, 4)
+
+
+print("Complex Number 1:")
+c1.display()
+
+print("Complex Number 2:")
+c2.display()
+
+
+c3 = COMPLEX.add_complex(c1, c2)
+
+
+print("Result of Addition:")
+c3.display()
